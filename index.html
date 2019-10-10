@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta charset="UTF-8">
+        <title>Thicc Tac SzabóT</title>
+        <link rel="icon" href="game/assets/images/szabot.png">
+        
+        <script defer src=https://cdn.JsDelivr.net/npm/p5></script>
+        <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.dom.min.js></script>
+        <script defer src=https://cdn.JsDelivr.net/npm/p5/lib/addons/p5.sound.min.js></script>
+
+        <style>
+            @-webkit-keyframes backgroundAnim {
+                0%{background-position:0% 19%}
+                50%{background-position:100% 82%}
+                100%{background-position:0% 19%}
+            }
+            @-moz-keyframes backgroundAnim {
+                0%{background-position:0% 19%}
+                50%{background-position:100% 82%}
+                100%{background-position:0% 19%}
+            }
+            @keyframes backgroundAnim {
+                0%{background-position:0% 19%}
+                50%{background-position:100% 82%}
+                100%{background-position:0% 19%}
+            }
+
+            html {
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+                background-repeat:no-repeat;
+                min-width: 100%;
+                min-height: 100%;
+                width: 100%;
+                height: 100%;
+
+                background: linear-gradient(
+                    to bottom right, 
+                    rgb(76, 175, 80), 
+                    rgb(104, 192, 107),
+                    rgb(0, 255, 255), 
+                    rgb(255, 0, 255)
+                );
+
+                background-size: 600% 600%;
+                -webkit-animation: backgroundAnim 25s ease infinite;
+                -moz-animation: backgroundAnim 25s ease infinite;
+                animation: backgroundAnim 25s ease infinite; 
+            }
+
+            html, body {
+                height: 100%;
+                display: grid;
+                overflow: hidden;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 12px;
+            }
+
+            #main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+
+            .a {
+                transition: all .2s ease-in-out;
+                filter: grayscale(100%);
+                width: 180px;
+                height: 290px;
+                margin: 15px;
+                border-radius: 12px;
+            }
+
+            .a:hover {
+                box-shadow: 0 8px 16px 0 #3029299a;
+                transition: all .4s ease-in-out;
+                filter: grayscale(0%);
+                transform: scale(1.2);
+                cursor: pointer;
+            }
+
+            @media only screen and (max-width: 500px) {
+                .a {
+                    width: 270px;
+                    height: 480px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <a href="game/index.html">
+                <div class="a">
+                    <img src="images/screen_thicctac.jpg" alt="" />
+                </div>
+            </a>
+            <a href="memes/index.html">
+                <div class="a">
+                    <img src="images/screen_memes.jpg" alt="" />
+                </div>
+            </a>
+            <a href="https://github.com/thicctacszabot/thicctacszabot.github.io">
+                <div class="a">
+                    <img src="images/screen_source.jpg" alt="" />
+                </div>
+            </a>
+        </div>
+    </body>
+</html>
