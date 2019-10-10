@@ -73,11 +73,11 @@
             }
 
             function drawSzaboT(x, y) {
-                image(szabot, x - 70, y - 70, size - 20, size - 20)
+                image(szabot, x, y, size, size)
             }
 
             function drawAlexin(x, y) {
-                image(alexin, x - 70, y - 70, size - 20, size - 20)
+                image(alexin, x, y, size, size)
             }
 
             function getRect(x, y) {
@@ -93,7 +93,7 @@
                 _x = rect[0] * size
                 _y = rect[1] * size
 
-                return [_x + 80, _y + 80]
+                return [_x, _y]
             }
 
             function get_block(p) {
