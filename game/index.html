@@ -14,8 +14,7 @@
         <script>
             let width = 0
             let divider = 5
-            let wd = width / divider
-            let size = wd - 10
+            let size = width / divider
 
             player = "SzaboT"
 
@@ -66,8 +65,8 @@
                 fill(0)
 
                 for (i = 1; i < divider; i++) {
-                    line(i * (wd), 0, i * (wd), width)
-                    line(0, i * (wd), width, i * (wd))
+                    line(i * (size), 0, i * (size), width)
+                    line(0, i * (size), width, i * (size))
                 }
                     
                 strokeWeight(3)
@@ -86,13 +85,13 @@
                 row = 0
                 for (i = 0; i < divider; i++)
                     for (j = 0; j < divider; j++)
-                        if (x > i * wd && x < (i + 1) * wd && y > j * wd && y < (j + 1) * wd)
+                        if (x > i * size && x < (i + 1) * size && y > j * size && y < (j + 1) * size)
                             return [i, j]
             }
 
             function getCoords(rect) {
-                _x = rect[0] * wd + 10
-                _y = rect[1] * wd + 10
+                _x = rect[0] * size
+                _y = rect[1] * size
 
                 return [_x + 80, _y + 80]
             }
@@ -175,9 +174,7 @@
                 else
                     width = windowHeight - 40
 
-                wd = width / divider
-
-                size = wd - 10
+                size = width / divider
 
                 init()
             }
